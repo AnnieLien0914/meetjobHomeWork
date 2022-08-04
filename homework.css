@@ -1,0 +1,79 @@
+body{
+	margin: 0 auto; /*外距歸零(網頁會預設)*/
+	height: 100%;
+}
+
+#wrapper{
+	min-height: 100%;
+	margin-bottom: -100px; /*footer的高度會是100px。因已有最低高度，若不減去會出現在整體的下面，多出footer的高度*/
+}
+#banner{
+	height: 70px;
+	width: 100%
+}
+
+#menu{
+	height: 50px;
+	width: 100%;
+	background-color: #DB7318;
+	color: #ffffff; /*區塊內文字為白色*/
+}
+
+#content{
+	min-height: 300px;
+	width: 100%;
+}
+
+#footer{
+	height: 100px;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+/*以下為作業新增CSS*/
+
+#logo{
+	margin-left: 3%;
+	height: 95%;
+	float:left;
+	width: 70px;
+}
+
+img{
+	height: auto;
+	width: 100%;
+}
+
+#sms{
+	margin-top: 2%;
+	height: 70px;
+	width:100;
+	float: right;
+}
+
+.icon{
+	float: left;
+	margin:5px;
+	width: 20px;
+	height: 20px%;
+
+}
+.container{
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin: 3%;
+	padding: 10px;
+	border: 2px solid yellow;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 5px  5px  5px #fbbaa9;
+}
+
+p{
+	font-family: arial;
+	text-align: center;
+	color:red;
+	font-size: 15pt;
+}
