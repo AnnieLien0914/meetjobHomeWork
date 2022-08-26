@@ -1,0 +1,267 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>0823 Homework</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<style type="text/css">
+
+		body{
+			margin: 0 auto;
+			height: 100%;
+			font-family: arial;
+			text-decoration: none;
+		}
+
+		#banner{
+			height: 70px;
+			width: 100%;
+			background-color: #FFF091;
+			margin: 0;
+		}
+
+		#nav{
+			height: 25px;
+			width: 100%;
+			background-color: #D5FF91;
+			border-top:3px dotted #fff;
+		}
+
+		#menu{
+			position: absolute;
+			height: 22px;
+			text-align: center;
+		}
+
+		#menu, #menu ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		#menu li{
+			border-right: 2px solid #fff;
+			border-bottom: 2px solid #fff;
+			float: left;
+			background-color: #D5FF91;
+			width: 100px;	
+			box-shadow: 2px 2px 1px #555;
+		}
+
+		#menu a{
+			font-size: 16px;
+			font-weight: bold;
+			color: #555;
+			text-decoration: none;
+		}
+
+		.menulist{
+			position: absolute;
+			left: auto;
+			width: 90px;
+		}
+
+		#content{
+			min-height: 200px;
+			width: 100%;
+			background-color:#FFFAD0;
+			padding-bottom: 10px;
+		}
+
+		#image{
+			height: 280px;
+
+		}
+
+		#image img{
+			height: 250px;
+			width: auto;
+			float: left;
+			margin: 5px;
+		}
+
+		#folding{
+			min-height: auto;
+			width: 100%;			
+		}
+
+		#foldclick{
+			height: 25px;
+			width: 100%;
+			font-weight: bold;
+			text-align: center;
+			background-color: #D5FF91;
+			border: 2px double #fff;
+		}
+		
+		#foldclick p{
+			font-size: 12px;
+			color: #000;
+		}
+
+		#foldspace{
+			height: 60px;
+			width: 100%;
+			background-color: #fff;
+			position: relative;
+		}
+
+		#foldspace p{
+			margin-top: 0px;
+			text-align: center;
+			padding-top: 5px;
+		}
+
+		#keyin{
+			margin-left: 15px;
+		}
+
+		#footer{
+			font-size:8px;
+			text-align: center;
+		}
+
+		.active{
+			background-color: #fff;
+		}
+
+		a{
+
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="banner"><p>0823 Homework</p>
+	</div>
+
+	
+	<div id="nav">
+		<ul id="menu">
+
+			<li><a href="#">課程總覽</a>
+				<ul class="menulist">
+					<li><a href="#">平面設計類</a></li>
+					<li><a href="#">工業設計</a></li>
+					<li><a href="#">軟體設計</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">教師陣容</a>
+				<ul class="menulist">
+					<li><a href="#">平面設計類</a></li>
+					<li><a href="#">工業設計</a></li>
+					<li><a href="#">軟體設計</a></li>
+				</ul>
+			</li>
+
+
+			<li><a href="#">學員成果</a>
+				<ul class="menulist">
+					<li><a href="#">成果展</a></li>
+					<li><a href="#">作品集</a></li>
+					<li><a href="#">心得</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">最新消息</a>
+				<ul class="menulist">
+					<li><a href="#">搶手課程</a></li>
+					<li><a href="#">新聞專區</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">聯絡方式</a></li>
+
+		</ul>
+
+
+	</div>
+
+
+	<div id="content">
+
+		<div id="image">
+			<a href="https://www.pinterest.com/pin/703756184636287/" target="blank" title="Rice ball"><img src="https://i.pinimg.com/564x/56/56/40/56564030609cac156a52fbf11e79b09c.jpg"></a>
+			<a href="https://www.pinterest.com/pin/703756184636287/" target="blank" title="Rice ball"><img src="https://i.pinimg.com/564x/56/56/40/56564030609cac156a52fbf11e79b09c.jpg"></a>
+			<a href="https://www.pinterest.com/pin/703756184636287/" target="blank" title="Rice ball"><img src="https://i.pinimg.com/564x/56/56/40/56564030609cac156a52fbf11e79b09c.jpg"></a>
+			<a href="https://www.pinterest.com/pin/703756184636287/" target="blank" title="Rice ball"><img src="https://i.pinimg.com/564x/56/56/40/56564030609cac156a52fbf11e79b09c.jpg"></a>
+		</div>
+
+		<div id="folding">
+			<a href="#"><div id="foldclick">Image credit</div></a>
+
+			<div id="foldspace"><a href="https://www.pinterest.com/pin/703756184636287/" target="blank"><p>Image credit to NhưNhư</p></a></div>			
+		</div>
+
+		<hr>
+
+		<div id="keyin">
+			年齡: <input type="text" id="age" name="age" required/>
+			<button id="checking">送出</button>
+			<p id="alertmsg"></p>
+		</div>
+		
+	</div>
+
+
+	<div id="footer"><p>2022.08.23 by LCC ID:105170269</p></div>
+
+	<script>
+
+		//選單
+		$(document).ready(function(){
+
+			$("#menu li ul").hide();
+			$("#menu li").hover(
+
+				function(){
+					$(this).find("ul").slideDown("fast");
+					$(this).find("a:first").addClass("active");
+				},function(){
+					$(this).find(".menulist").fadeOut("fast");
+					$(this).find("a").removeClass("active");
+				}
+				)
+				
+		});
+
+
+		//顯示隱藏
+
+		$(document).ready(function(){
+
+			$("#foldspace").hide();
+			
+			$("#foldclick").click(function(){
+				$("#foldspace").slideToggle();
+			})
+		});
+
+
+
+		//年齡檢查
+		$(document).ready(function(){
+
+			$("#checking").click(function(){
+				var age = $("#age").val();
+
+
+				if(age<15 || age>50){
+					
+					alert("年齡: "+age + " 無效");
+
+				}else{
+					
+					alert("年齡: "+age + " 成功");
+				}
+			})
+
+		});
+
+
+	</script>
+
+</body>
+</html>
