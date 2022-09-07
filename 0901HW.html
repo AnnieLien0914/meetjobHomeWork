@@ -1,0 +1,1406 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>0901 Homework</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<style>
+		body{
+	margin:0 auto;
+	height: 100%;
+	font-family: arial;
+	text-decoration: none;
+}
+
+#wrapper{
+	min-height: 100%;
+	margin-bottom: -300px;
+}
+
+	#banner{
+		height: 90px;
+		width: 100%;
+	}
+		#logo{
+			height: 80px;
+			width: 100px;
+			margin-top: 30px;
+			margin-left: 30px;
+			float: left;
+		}
+
+		.search{
+			height: 30px;
+			margin-bottom: 20px;
+			float: right;
+			margin-top: 50px;
+			margin-right: 10px;
+		}
+
+		#search img{
+			height: 100%;
+			width: auto;
+		}
+
+	#nav{
+		height: 50px;
+		width: 100%;
+		margin: 0;
+		background-color: #0033cc;
+	}
+
+		#menu{
+			height: 30px;
+			position: relative;
+			top: 10px;
+			margin: 0;			
+			display: flex;
+			justify-content: center;
+		}
+
+		#menu ul{
+			padding: 0;
+
+		}
+
+		#menu li{
+			width: 100px;
+			float: left;
+			list-style: none;
+			background-color: #0033cc;
+			left: auto;
+			margin: 0 10px;
+		}
+
+		#menu a{
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		.submenu{
+			position: absolute;
+			left: auto;
+			width: 100px;
+			color: #fff;
+		}
+
+
+		.navHover{
+			background-color: #002699;
+		}
+
+		#nav ul li{
+			z-index: 0;
+		}
+
+
+	#topSec{
+		height: 500px;
+		width: 100%;
+		background-color: #000;
+		margin:0;
+	}
+
+		#topSecLeft{
+			height: 498px;
+			width: 700px;
+			margin:0 40px;
+			float: left;
+			position: relative;
+			border: 1px solid #ccc;
+			overflow: hidden;
+		}
+
+
+		#imgScroll{
+			width: 5000px;
+			position: relative;
+			left: 0;
+			top: 0;
+			margin:0;
+			padding: 0;
+		}
+
+		#imgScroll img{
+			width: 700px;
+			height: 498px;
+			object-fit:cover; 
+		}
+
+		#imgScroll li{
+			float: left;
+		}
+
+		.btn1{
+			width: 30px;
+			height: 50px;
+			background-color: #000;
+
+			opacity: 0.5;
+			filter: alpha(opacity:0.5);
+			position: absolute;
+			top: 50%;
+			margin-top:-25px;
+
+			cursor: pointer;
+			text-align: center;
+			line-height: 50px;
+			font-size: 50px;
+			color: #fff;
+			display: none;
+		}
+
+		#topSecLeft .Left{
+			left: 0px;
+		}
+
+		#topSecLeft .Right{
+			right: 0px;
+		}
+
+		#topSecLeft:hover .btn1{
+			display: block;
+		}
+
+		#topSecRight{
+			height: 500px;
+			width: 300px;
+			margin:0 5%;
+			float: right;
+			position: relative;
+			overflow: hidden;
+			
+		}
+
+		.topNew{
+			height: 150px;
+			width: 300px;
+			margin-bottom: 25px;
+		}
+
+		.topNew img{
+			height: 150px;
+			width: 300px;
+			object-fit:cover; 
+		}
+
+		.topNew h3{
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			left: 5px;
+			background-color: #fff;
+			color: #000;
+		}
+
+		#newsSec{
+			height: 450px;
+			margin: 0 40px;
+			padding: 0;
+		}
+
+			.title{
+				min-height: 25px;
+				padding: 10px;
+				text-align: center;
+				text-decoration: underline 2px;				
+			}
+
+			.content{
+				min-height: 300px;
+				text-decoration: none;
+				border-top: 1px solid #ccc;
+				padding-top:10px;
+			}
+
+			#newLeft{
+				height: 510px;
+				width: 900px;
+				padding: 10px 0;
+				float: left;
+				margin-top: 10px;
+			}
+
+			#newsSec .logoBar{
+				height: 0px;
+				margin: 0;
+				padding: 0;
+			}
+
+				.news1{
+					height: 490px;
+					float: left;
+					margin-right: 10px;
+					overflow: hidden;
+					text-decoration: none;
+					color: #000;
+
+				}
+
+				.news1 img{
+					height: 330px;
+					width: 440px;
+					object-fit:cover; 
+				}
+
+				.newsText{
+					height: 100px;
+					width: 440px;
+				}
+
+				.newsText p{
+					color: #777;
+				}
+
+			#newsRight{
+				height: 510px;
+				width: 280px;
+				padding: 0;
+				float: right;
+				margin-top: 10px;
+				
+			}
+
+			.newsTopic{
+				height: 60px;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #ccc;
+				text-decoration: none;
+			}
+
+			#newsRight h2{
+				font-size: 20px;
+				text-align: left;
+				color: #000;
+				margin-top: 0;
+			}
+				#newsRight a{
+					text-decoration: none;
+				}
+
+	#issueSec{
+		height: 400px;
+		margin: 0;
+		padding: 0;
+		background-color: #002699;
+		clear: both;
+		position: relative;
+	}
+
+		#issueTop{
+			height: 60px;
+			color: #fff;
+		}
+
+			#issueTitle{
+				float: left;
+				margin-left: 40px; 
+			}
+
+			#issueTitle h2{
+				margin-top: 30px;
+			}
+
+			#moreIssue{
+				float: right;
+				margin: 0;
+				margin-right: 10px;
+				font-size: 15px;
+				margin-bottom: 5px;
+			} 
+
+			#moreIssue a{
+				color: #fff;
+				text-decoration: none;
+				margin: 0;
+			}
+
+			#moreIssue p{
+				margin-top: 40px;
+			}
+
+
+
+		#issueContent{
+			height: 250px;
+			position: absolute;
+			left: 40px;
+			right: 40px;
+			overflow: hidden;
+			display: flex;
+		}
+
+			.issueBlock{
+				height: 250px;
+				width: 300px;
+				margin-top: 10px;
+				margin-right: 15px;
+				float: left;
+				text-align: left;
+				position: relative;
+			}
+
+				 .issueImg{
+				 	height: 200px;
+					width: 300px;
+				 }
+
+				.issueBlock img{
+					height: 200px;
+					width: 300px;
+					object-fit:cover; 
+				}
+
+				.issueBlock h2{
+					margin-top: 10px;
+					color: #fff;
+					font-size: 18px;
+				}
+
+			.btn2{
+				height: 25px;
+				width: 25px;
+				color: #fff;
+				border: 1px solid #fff;
+				padding: 5px;
+				font-size: 20px;
+				line-height: 30px;
+				float: left;
+				margin-left: 20px;
+				position: absolute;
+				top: 300px;
+				text-align:center;
+
+				cursor: pointer;
+			}
+
+			#issueSec .Left{
+				right: 100px;
+			}
+
+			#issueSec .Right{
+				right: 40px;
+			}
+
+
+	#TVsec{
+		min-height: 500px;
+		position: relative;
+		margin:10px 40px;
+	}
+
+		.logoBar{
+			height: 100px;
+			margin:0 40px;
+		}
+
+			.TvLogo{
+				float: left;
+			}
+
+			.TvSms{
+				float: right;
+				position: relative;
+				top: 40px;
+			}
+
+				.SmsIcon{
+					float: right;
+					margin-left: 10px;
+					position: relative;
+				}
+
+				.SmsLink{
+					float: left;
+					position: relative;
+    				top: 15px;
+    				right: 10px;
+				}
+				
+					.TvSms a{
+						text-decoration: none;
+						color: #000;
+						position: relative;
+					}
+
+				.TvShow{
+					height: 500px;
+					display: flex;
+					overflow: hidden;
+				}
+
+					.show a{
+						text-decoration: none;
+						color: #000;
+						text-align: left;
+					}
+
+					.show{
+						margin-right: 15px;
+						float: left;						
+					}
+
+					.show .A{
+						height: 400px;
+						width: 320px;
+					}
+
+					.show .B{
+						height: 300px;
+						width: 220px;
+					}
+
+					.A .ShowImg{
+						height: 320px;
+						width: 320px;
+						overflow: hidden;
+					}
+						.A img{
+						height: 320px;
+						width: 320px;
+						object-fit:cover; 
+						}
+
+					.B .ShowImg{
+						
+						width: 220px;
+						overflow: hidden;
+					}
+					
+
+						.B img{
+							height: 200px;
+							width: 220px;
+							object-fit:cover; 
+						}
+
+					.show p{
+						color: #ccc;
+					}
+
+			.btn3{
+				height: 20px;
+				width: 25px;
+				color: #fff;
+				background-color: #ccc; 
+				padding: 5px;
+				font-size: 20px;
+				float: left;
+				margin-left: 20px;
+				position: absolute;
+				top: 575px;
+				text-align:center;
+
+				cursor: pointer;
+			}
+
+			#TVsec .Left{
+				right: 100px;
+			}
+
+			#TVsec .Right{
+				right: 40px;
+			}
+
+
+	#moreShow{
+		height: 380px;
+		margin:10px 40px;
+		position: relative;
+	}
+
+
+	#moreShow .logoBar{
+		height: 80px;
+		margin: 0;
+	}
+
+	#moreShow a{
+		text-decoration: none;
+		color:#000;
+	}
+
+	.TVblock{
+		height: 350px;
+		width: 250px;
+		border-radius: 10px;
+		border: 1px solid #ccc;
+		overflow: hidden;
+		float: left;
+		margin-right: 40px;
+		margin-bottom: 40px;
+		position: relative;
+	}
+
+		.TVImg{
+			height: 120px;
+			width: 250px;
+			overflow: hidden;
+		}
+
+			.TVImg img{
+				height: 120px;
+				width: 250px;
+				object-fit: cover;
+			}
+
+		.TVblock h2, .TVblock p{
+			margin: 7px auto 0 10px;
+		}
+
+		.blockSMS img{
+			float: right;
+			margin-right: 5px;
+		}
+
+		.blockSMS{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+		}
+
+		.btn4{
+				height: 20px;
+				width: 25px;
+				color: #fff;
+				background-color: #ccc; 
+				padding: 5px;
+				font-size: 20px;
+				float: left;
+				margin-left: 20px;
+				position: absolute;
+				top: 450px;
+				text-align:center;
+
+				cursor: pointer;
+			}
+
+		#moreShow .Left{
+				right: 100px;
+			}
+
+		#moreShow .Right{
+			right: 40px;
+		}
+
+		#mostHit a, #DramaZone a, #moreDrama a,#moreTV a{
+			text-decoration: none;
+		}
+
+		#Drama{
+			min-height: 0;
+			position: relative;
+			margin:10px 40px;
+		}
+
+		#DramaSec{
+			min-height: 500px;
+			margin-bottom: 50px;
+		}
+
+		#mostHit{
+			min-height:400px;
+			margin-bottom: 30px;
+		}
+
+			#HitImg{
+				height: 400px;
+				width: 600px;
+				overflow: hidden;
+				float: left;
+				margin-right: 50px;
+			}
+
+			 #HitImg img{
+			 	height: 400px;
+				width: 600px;
+				object-fit: cover;
+			 }
+
+			#HitText{
+				height: 400px;
+				width: auto;
+			}
+
+			
+			#HitText h2{
+				color: #000;
+				margin-bottom: 20px;
+			}
+
+			#HitText p{
+				color: #888;
+			}
+
+		#DramaZone{
+			min-height: 450px;
+			margin-bottom: 30px;
+		}
+
+			.DramaBlock{
+				height: 250px;
+				width: 250px;
+				float: left;
+				margin: 0 40px 20px 0px;
+			}
+		
+			.DramaImg{
+				height: 180px;
+				width: 250px;
+				overflow: hidden;
+			}
+
+			.DramaImg img{
+				height: 180px;
+				width: 250px;
+				object-fit: cover;
+			}
+
+			#DramaZone h3, #moreDrama h3{
+				color: #000;
+				margin-top: 3px;
+			}
+
+		#moreDrama{
+			min-height: 500px;
+			margin-bottom: 30px;
+			position: relative;
+		}
+
+	#moreTV{
+		height: 70px;
+		position: relative;
+
+	}
+
+		#moreButton{
+			width: 150px;
+			height:40px;
+			text-align: center;
+			margin: auto;
+			border: 2px solid #ccc;
+			border-radius: 15px;
+			position: absolute;
+			left: 40%;
+			right: auto;
+			padding-top: 10px;
+		}
+
+		#moreButton span{
+			color: #ccc;
+			font-size: 22px;
+			height: 32px;
+			margin:0;
+		}
+
+
+
+	#footer{
+		height: 350px;
+		background-color: #000;
+		clear: both;
+		margin:0;
+	}
+
+		#footerContent{
+			margin: 0px 40px;
+			min-height: 300px;
+			height: 350px;
+			position: relative;
+		}
+
+		#footerLeft{
+			height: 200px;
+			width: 300px;
+			float: left;
+			color: #fff;
+			margin-right: 100px;
+			margin-top: 50px;
+		}
+
+			#footerLeft img{				
+				margin-bottom: 20px;
+				width: 120px;
+			}
+
+			#footerLeft p{
+				display: block;
+				margin: 0;
+			}
+
+			.footerText .contact{
+				margin-top: 10px;
+			}
+
+		#footerRight{
+			height: 200px;
+			width:auto;
+			float: left;
+			margin-top: 50px;
+
+		}	
+
+		.footerBlock{
+			height: 200px;
+			width: 150px;
+			float: left;
+			margin-right: 50px;
+
+		}	
+
+			.footerBlock a{
+				display: block;
+				text-decoration: none;
+				color: #777;
+				margin-bottom: 10px;
+			}
+
+
+
+		
+	#footerBottom{
+		height: 100px;
+		width: 100%-40px;
+		border-top: 1px solid #ccc;
+		position: absolute;
+		right: 40px;
+		left: 20px;
+		top: 250px;
+		text-align: right;
+	}
+
+		#footerBottom p{
+			color: #ccc;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div id="wrapper">
+
+	<div id="banner">
+		<a href="0901HW.html"><div id="logo"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/TVBS_logo.svg"></div></a>
+
+		<a href="#"><div id="search" class="search"><img src="https://cdn-icons-png.flaticon.com/512/2811/2811790.png"></div></a>
+		<input type="text" name="search" class="search" placeholder="請輸入關鍵字">
+	</div>
+
+	<div id="nav">
+		<ul id="menu">
+
+			<li><a href="0901HW.html">首頁</a></li>
+
+			<li><a href="#">新聞</a>
+				<ul class="submenu">
+					<li><a href="#">最新消息</li>
+					<li><a href="#">當地新聞</li>
+				</ul>
+			</li>
+
+			<li><a href="#">戲劇</a>
+				<ul class="submenu">
+					<li><a href="#">優質戲劇</a></li>
+					<li><a href="#">精選戲劇</a></li>
+					<li><a href="#">本土戲劇</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">財經專區</a>
+				<ul class="submenu">
+					<li><a href="#">股票資訊</a></li>
+					<li><a href="#">房地產</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">教育園區</a>
+				<ul class="submenu">
+					<li><a href="#">兒童節目</a></li>
+					<li><a href="#">外語教材</a></li>
+					<li><a href="#">活動消息</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">公益專區</a>
+				<ul class="submenu">
+					<li><a href="#">志工招募</a></li>
+					<li><a href="#">機構募款</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">本台資訊</a>
+				<ul class="submenu">
+					<li><a href="#">聯絡資訊</a></li>
+					<li><a href="#">社會回饋</a></li>
+					<li><a href="#">徵才專區</a></li>
+				</ul>
+			</li>
+
+
+
+		</ul>
+	</div>
+
+	<div id="topSec">
+		
+		<div id="topSecLeft">
+			<ul id="imgScroll">
+				<li><img src="https://i.pinimg.com/474x/44/e8/3a/44e83ab5d8efaf9c77b0432592ffa4a8.jpg"></li>
+				<li><img src="https://i.pinimg.com/474x/87/fd/89/87fd898b545ab7c80a847619ced7797e.jpg"></li>
+				<li><img src="https://i.pinimg.com/474x/8a/75/a3/8a75a3b8f1efb8276573678f3a0882e0.jpg"></li>
+			</ul>
+			<div class="btn1 Left">&lt;</div>
+			<div class="btn1 Right">&gt;</div>
+		</div>
+
+		<div id="topSecRight">
+			<a href="#"><div class="topNew">
+				<h3>第一個</h3>
+				<img src="https://i.pinimg.com/474x/60/f1/c5/60f1c5095a9f08d8ec3b8ec68c3e0c5d.jpg">
+			</div></a>
+
+			<a href="#"><div class="topNew">
+				<h3>第二個</h3>
+				<img src="https://i.pinimg.com/474x/60/f1/c5/60f1c5095a9f08d8ec3b8ec68c3e0c5d.jpg">
+			</div></a>
+
+			<a href="#"><div class="topNew">
+				<h3>第三個</h3>
+				<img src="https://i.pinimg.com/474x/4c/c7/d1/4cc7d1ff015323db412a93f1da3450d5.jpg">
+			</div></a>
+
+		</div>
+
+	</div>
+
+	<div id="newsSec">
+		<h1 class="title">新聞快訊</h1>
+		<div class="logoBar"></div>
+		<div class="content">
+			
+			<div id="newsLeft">
+				<a href="#"><div class="news1">
+					<div class="newsImg"><img src="https://i.pinimg.com/474x/33/29/53/332953a0a3a657e55ae12d3b4ae9a238.jpg"></div>
+					<div class="newsText">
+						<h2>Peas are out!</h2>
+						<p>Will other peas follow up?</p>
+					</div>
+				</div></a>
+
+				<a href="#"><div class="news1">
+					<div class="newsImg">
+						<img src="https://i.pinimg.com/474x/cf/af/ef/cfafef5f7e708925bcf489b97f3163bd.jpg"></div>
+					<div class="newsText">
+						<h2>Funny!! Milk Shake~</h2>
+						<p>Will the milk be spilt out? Can't wait for the outcome!</p>
+					</div>
+				</div></a>
+
+			</div>
+
+
+			<div id="newsRight">
+				<a href="#"><div class="newsTopic"><h2>颱風會來嗎?</h2></div></a>
+				<a href="#"><div class="newsTopic"><h2>明年基本薪資調漲?</h2></div></a>
+				<a href="#"><div class="newsTopic"><h2>中國面臨經濟危機</h2></div></a>
+				<a href="#"><div class="newsTopic"><h2>開學了!?</h2></div></a>
+				<a href="#"><div class="newsTopic"><h2>想離職了嗎?</h2></div></a>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+
+	<div id="issueSec">
+		<div id="issueTop">
+			<div id="issueTitle"><h2>熱門議題</h2></div>
+			<div id="moreIssue"><a href="#"><p> &gt; 全部議題</p></a></div>
+		</div>
+
+		<div id="issueContent">
+			<div class="issueBlock">
+				<div class="issueImg"><img src="https://i.pinimg.com/474x/c7/fd/0e/c7fd0e47a7f00afe72ba96abc14e0bcd.jpg"></div>
+				<h2>運動過度反效果</h2>
+			</div>
+
+			<div class="issueBlock">
+				<div class="issueImg"><img src="https://i.pinimg.com/474x/73/46/2e/73462e8c49390cf0374216cfae1aff94.jpg"></div>
+				<h2>美容保養</h2>
+			</div>
+
+			<div class="issueBlock">
+				<div class="issueImg"><img src="https://i.pinimg.com/474x/c7/fd/0e/c7fd0e47a7f00afe72ba96abc14e0bcd.jpg"></div>
+				<h2>運動過度反效果</h2>
+			</div>
+
+			<div class="issueBlock">
+				<div class="issueImg"><img src="https://i.pinimg.com/474x/73/46/2e/73462e8c49390cf0374216cfae1aff94.jpg"></div>
+				<h2>美容保養</h2>
+			</div>
+
+			<div class="issueBlock">
+				<div class="issueImg"><img src="https://i.pinimg.com/474x/c7/fd/0e/c7fd0e47a7f00afe72ba96abc14e0bcd.jpg"></div>
+				<h2>運動過度反效果?!</h2>
+			</div>
+
+			<div class="issueBlock">
+				<div class="issueImg"><img src="https://i.pinimg.com/474x/73/46/2e/73462e8c49390cf0374216cfae1aff94.jpg"></div>
+				<h2>美容保養</h2>
+			</div>
+
+		</div>
+
+		<div class="btn2 Left">&lt;</div>
+		<div class="btn2 Right">&gt;</div>
+
+	</div>
+
+				
+
+	<div id="TVsec">
+		<h1 class="title">精彩節目</h1>
+		<div class="logoBar">
+			<div class="TvLogo">
+				<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/logo_supertatse.svg"></a>
+			</div>
+
+			<div class="TvSms">
+				<div class="SmsIcon">
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-IG-color.svg"></a>
+				</div>
+
+				<div class="SmsIcon">
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-YT-color.svg"></a>
+				</div>
+
+				<div class="SmsIcon">
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-FB-color.svg"></a>
+				</div>
+
+				<div class="SmsLink">
+					<a href="#"><span>追蹤我們 ｜</span></a>
+					<a href="#"><span>了解更多 </span></a>
+				</div>
+			</div>
+
+		</div>
+
+			<div class="content">
+				<div class="TvShow">
+					<div class="Show A">
+						<a href="#">
+							<div class="ShowImg"><img src="https://i.pinimg.com/474x/bc/9a/f4/bc9af4c2074cd1e679031a593d1e5b8d.jpg"></div>
+							<h2>時下最流行的甜點</h2></a>
+						</div>
+
+					
+					<div class="Show B">
+						<a href="#">
+								<div class="ShowImg"><img src="https://i.pinimg.com/474x/a2/45/24/a24524c60d6ea16adf8cf6aad6b45e77.jpg"></div>
+						<h3>全球速食排行出爐</h3>
+						<p>漢堡、炸雞、薯條...你的最愛是哪一間?</p></a>
+					</div>
+					
+
+					<div class="Show B">
+						<a href="#">
+							<div class="ShowImg"><img src="https://i.pinimg.com/564x/82/45/57/824557bc4e49b903ad181413da7eab3d.jpg"></div>
+							<h3>鮭魚吃法大公開</h3>
+							<p>營養又美味的食材，如何料理才是一絕的?</p></a>
+						</div>
+
+					<div class="Show B">
+						<a href="#">
+							<div class="ShowImg"><img src="https://i.pinimg.com/474x/41/84/a3/4184a3b52dda6dd7ba3b70faa4aa2033.jpg"></div>
+							<h3>飲食文化改變</h3>
+							<p> 「等一下!」手機先吃的時代已來臨</p></a>
+					</div>
+					
+
+					<div class="Show B">
+						<a href="#">
+							<div class="ShowImg"><img src="https://i.pinimg.com/474x/3f/5b/9f/3f5b9f648efed9d2c5d4e3d6efd81c3d.jpg"></div>
+							<h3>不只好吃，更好拍!</h3>
+							<p>如何讓身體吸收健康的食物，又能看起來有食慾，大師下馬親自傳授秘訣</p></a>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="btn3 Left">&lt;</div>
+			<div class="btn3 Right">&gt;</div>
+		
+	</div>
+
+	
+	<div id="moreShow">
+		<div class="logoBar">
+			<div class="TvLogo">
+				<h2>更多精采節目</h2>
+			</div>	
+		</div>
+
+		<div class="content">
+			<div class="TVblock">
+				<a href="#">
+					<div class="TVImg">
+						<img src="https://i.pinimg.com/474x/36/df/c1/36dfc139ec9d5d98a2289b39348b4f0e.jpg">
+					</div>
+					<h2>節目名稱</h2>
+					<p>節目介紹</p>
+				</a>
+
+				<div class="blockSMS">
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-YT-color.svg"></a>
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-FB-color.svg"></a>
+				</div>
+			</div>
+
+			<div class="TVblock">
+				<a href="#">
+					<div class="TVImg">
+						<img src="https://i.pinimg.com/474x/33/23/9b/33239b159c146bbd66b90eaf85117e8f.jpg">
+					</div>
+					<h2>節目名稱</h2>
+					<p>節目介紹</p>
+				</a>
+				
+				<div class="blockSMS">
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-YT-color.svg"></a>
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-FB-color.svg"></a>
+				</div>
+			</div>
+
+			<div class="TVblock">
+				<a href="#">
+					<div class="TVImg">
+						<img src="https://i.pinimg.com/474x/6b/64/4a/6b644a0d32aea03d7c4c56660bc1088e.jpg">
+					</div>
+					<h2>節目名稱</h2>
+					<p>節目介紹</p>
+				</a>
+				
+				<div class="blockSMS">
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-YT-color.svg"></a>
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-FB-color.svg"></a>
+				</div>
+			</div>
+
+			<div class="TVblock">
+				<a href="#">
+					<div class="TVImg">
+						<img src="https://i.pinimg.com/474x/bb/66/a1/bb66a1657370d41dd8fae2e7f90efae7.jpg">
+					</div>
+					<h2>節目名稱</h2>
+					<p>節目介紹</p>
+				</a>
+				
+				<div class="blockSMS">
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-YT-color.svg"></a>
+					<a href="#"><img src="https://cc.tvbs.com.tw/portal_production/2022/images/icon-FB-color.svg"></a>
+				</div>
+			</div>
+
+			<div class="btn4 Left">&lt;</div>
+			<div class="btn4 Right">&gt;</div>
+		</div>
+	
+	</div>
+
+
+	<div id="Drama">
+		<h1 class="title">精彩節目</h1>
+		<div class="content">
+			<div id="DramaSec">
+				<div id="mostHit">
+					<a href="#"><div id="HitImg">
+						<img src="https://i.pinimg.com/474x/2e/ff/62/2eff620b9ce8150097dc30c1da503e38.jpg">
+					</div>
+					<div id="HitText">
+						<h2>節目名稱</h2>
+						<p>節目介紹</p>
+					</div></a>
+				</div>
+
+				<div id="DramaZone">
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/6a/ba/0d/6aba0d569cda9377314385aa77fec5e3.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/af/e7/5e/afe75eedb937c58ba4ee827df85e1675.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/99/85/5d/99855dad60ec4a8394bb369444e66667.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/00/cc/b5/00ccb59a1a02118b6cad14ceb578bb54.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/78/dc/e7/78dce79ac486a529612aa35d962a8c2c.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/41/b6/33/41b6334b3dc03d1564d79d0f82d3d386.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/c8/d2/d1/c8d2d104e93942eaa22fa3929ec6fae8.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/d0/26/a2/d026a25bb8385a9d3783f87798ffa0ff.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+				</div>
+
+				<div id="moreDrama">
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/6a/ba/0d/6aba0d569cda9377314385aa77fec5e3.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/af/e7/5e/afe75eedb937c58ba4ee827df85e1675.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/99/85/5d/99855dad60ec4a8394bb369444e66667.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/00/cc/b5/00ccb59a1a02118b6cad14ceb578bb54.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/78/dc/e7/78dce79ac486a529612aa35d962a8c2c.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/41/b6/33/41b6334b3dc03d1564d79d0f82d3d386.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/c8/d2/d1/c8d2d104e93942eaa22fa3929ec6fae8.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+					<div class="DramaBlock">
+						<a href="#"><div class="DramaImg">
+							<img src="https://i.pinimg.com/474x/d0/26/a2/d026a25bb8385a9d3783f87798ffa0ff.jpg">
+						</div>
+						<h3>節目名稱</h3>
+						</a>
+					</div>
+
+				</div>
+
+				<div id="moreTV">
+					<a href="##"><div id="moreButton">
+						<span>更多戲劇</span>
+					</div></a>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	
+
+</div>
+
+<div id="footer">
+	<div id="footerContent">
+		<div id="footerLeft">
+			<img src="https://cc.tvbs.com.tw/portal_production/2022/images/logo_footer.png">
+			<p class="footerText">歡迎致電</p>
+			<br>
+			<p class="footerText">Email: xxxxxxxx@gmail.com</p>
+			<p class="footerText">專線:0800-000-123</p>
+		</div>
+
+		<div id="footerRight">
+			<div class="footerBlock">
+				<a href="#">公司介紹</a>
+				<a href="#">加入我們</a>
+				<a href="#">節目表</a>
+				<a href="#">主播專區</a>
+				<a href="#">企業動態</a>
+			</div>
+
+			<div class="footerBlock">
+				<a href="#">新聞規範</a>
+				<a href="#">隱私權政權</a>
+				<a href="#">網站使用協議</a>
+				<a href="#">版權宣告</a>
+				<a href="#">服務範圍</a>
+			</div>
+
+			<div class="footerBlock">
+				<a href="#">節目版權銷售</a>
+				<a href="#">公開招標</a>
+				<a href="#">官方聲明</a>
+				<a href="#">更正與澄清</a>
+			</div>
+
+		</div>
+
+		<div id="footerBottom">
+			<P id="Copyright">© TVBS Media Inc. All Rights Reserved. 台北市內湖區瑞光路451號 | 聯利媒體股份有限公司</P>
+		</div>
+	</div>
+		
+</div>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		//選單特效
+
+		$("#menu li ul").hide();
+		$("#menu li").hover(
+			function(){
+				$(this).find("ul").slideDown("fast");
+				$(this).find("a:first").addClass("navHover");
+			},function(){
+				$(this).find(".submenu").fadeOut("fast");
+				$(this).find("a").removeClass("navHover");
+			}
+			)
+
+		//圖片輪播特效
+
+		var i=0;
+		var clone = $("#topSecLeft #imgScroll li").first().clone();
+
+		$("#topSecLeft #imgScroll").append(clone);
+
+		var size = $("#topSecLeft #imgScroll li").size();
+
+		var t = setInterval(function(){
+			i++;
+			move();
+		},1000);
+
+		function move(){
+			if ( i == size ) {
+				$("#topSecLeft #imgScroll").css({left:0});
+				i=1;
+			}
+			if (i == -1){
+				$("#topSecLeft #imgScroll").css({left:-(size-1)*5000});
+				i = size -2;
+			}
+			$("#topSecLeft #imgScroll").stop().animate({left:-i*700},400);
+		}
+
+		$("#topSecLeft").hover(function(){
+			clearInterval(t);
+
+		}, function(){
+			t = setInterval(function(){
+				i++;
+				move();
+			},1000);
+		});
+
+		$(".Left").click(function(){
+			i++;
+			move();
+		})
+
+		$(".Right").click(function(){
+			i--;
+			move();
+		})
+
+
+		$("#moreDrama").hide();
+
+		$("#moreButton").click(function(){
+			$("#moreDrama").slideDown();
+			$("#moreButton").hide();
+
+		})
+
+
+
+	});
+</script>
+
+
+</body>
+</html>
+
+
