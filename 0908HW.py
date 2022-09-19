@@ -67,3 +67,18 @@ print("總和為:",sum(y))
 print()
 print("-"*5,"有空題","-"*5)
 print()
+
+arr3=[]
+for z in range(1,16):
+    arr3.append(z)
+print(arr3)
+print()
+
+for g in range(1,6):
+    
+    for f in range(g):
+        n = 0 + f
+        print(arr3[0],end=" ")
+        del arr3[0]
+        
+    print()
