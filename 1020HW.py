@@ -109,6 +109,7 @@ elif option == '5':
         print("工作名稱: ",row[1])
         print("工作內容: ",row[2])
 
-    
+else:
+    print("請選擇有效項目")    
 
 dbHW.conn.close()
